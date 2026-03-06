@@ -2,116 +2,122 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>PixelFest 2026</title>
-
-  <!-- ERROR: falta viewport -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelFest</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR CORREGIDO -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <!-- ERROR: falta container -->
-    <a class="navbar-brand" href="#">PixelFest</a>
+    <div class="container">
+      <a class="navbar-brand" href="#">PixelFest</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- ERROR: toggler apunta a un id incorrecto -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- ERROR: este id no coincide -->
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Actividades</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Boletos</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#actividades">Actividades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#boletos">Boletos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="bg-light">
-    <!-- ERROR: falta container y spacing -->
-    <h1>Bienvenido a PixelFest 2026</h1>
-    <p>El evento definitivo de videojuegos, cosplay, tecnología y streaming.</p>
-    <a href="#" class="btn btn-primary">Comprar ahora</a>
+  <!-- HERO CORREGIDO -->
+  <section id="inicio" class="bg-light py-5 text-center">
+    <div class="container">
+      <h1 class="display-4 mb-3">Bienvenido a PixelFest 2026</h1>
+      <p class="lead mb-4">El evento definitivo de videojuegos, cosplay, tecnología y streaming.</p>
+      <a href="#boletos" class="btn btn-primary btn-lg">Comprar boletos</a>
+    </div>
   </section>
 
-  <!-- SECCIÓN ACTIVIDADES -->
-  <section id="actividades">
+  <!-- SECCIÓN ACTIVIDADES CORREGIDA -->
+  <section id="actividades" class="py-5">
     <div class="container">
-      <h2>Actividades principales</h2>
-
-      <!-- ERROR: sin g-4 -->
-      <div class="row">
-
-        <!-- ERROR: estrategia de columnas débil -->
-        <div class="col-md-4">
-          <!-- ERROR: sin h-100 ni shadow -->
-          <div class="card">
-            <!-- ERROR: imagen sin control responsivo adicional -->
-            <img src="https://via.placeholder.com/600x300" class="card-img-top" alt="Torneo">
+      <h2 class="text-center mb-4">Actividades principales</h2>
+      
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://weezevent.com/wp-content/uploads/2021/12/01103359/organiser-tournoi-jeux-video.png" 
+            class="card-img-top img-fluid" alt="Torneo de videojuegos">
             <div class="card-body">
               <h5 class="card-title">Torneos</h5>
-              <p class="card-text">Compite en distintos videojuegos.</p>
-              <a href="#" class="btn btn-outline-primary">Ver más</a>
+              <p class="card-text">Compite en distintos videojuegos y gana increíbles premios.</p>
+              <a href="#contacto" class="btn btn-outline-primary">Ver Más Información</a>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://via.placeholder.com/600x300" class="card-img-top" alt="Cosplay">
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbCNVzefgM1DDkyB2C7f_RoV6h7zVZiO33xg&s" 
+            class="card-img-top img-fluid" alt="Concurso de Cosplay">
             <div class="card-body">
               <h5 class="card-title">Cosplay</h5>
-              <p class="card-text">Concurso y pasarela de personajes.</p>
-              <a href="#" class="btn btn-outline-primary">Ver más</a>
+              <p class="card-text">Concurso y pasarela de personajes con premios especiales.</p>
+              <a href="#contacto" class="btn btn-outline-primary">Ver Más Información</a>
             </div>
           </div>
         </div>
 
-        <!-- ERROR: card con mucho más texto para romper alturas -->
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://via.placeholder.com/600x300" class="card-img-top" alt="Streaming">
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://d1ih8jugeo2m5m.cloudfront.net/2024/12/streaming_que_es.webp" 
+            class="card-img-top img-fluid" alt="Zona de Streaming">
             <div class="card-body">
               <h5 class="card-title">Streaming Zone</h5>
-              <p class="card-text">
-                Espacio dedicado a creadores de contenido, streamers invitados, sesiones de preguntas,
-                charlas, comunidad, convivencia, experiencias interactivas y actividades especiales.
-              </p>
-              <a href="#" class="btn btn-outline-primary">Ver más</a>
+              <p class="card-text">Espacio con streamers invitados, charlas y experiencias interactivas.</p>
+              <a href="#contacto" class="btn btn-outline-primary">Ver Más información</a>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- BOLETOS -->
-  <section id="boletos" class="bg-light">
+  <!-- BOLETOS CORREGIDO -->
+  <section id="boletos" class="bg-light py-5">
     <div class="container">
-      <h2>Boletos</h2>
-      <p>Compra tu acceso general o premium.</p>
-      <!-- ERROR: link sin navegación real -->
-      <a href="#" class="btn btn-success">Ir a compra</a>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2 class="mb-3">Boletos</h2>
+          <p class="lead mb-4">Compra tu acceso general o premium y vive la experiencia completa.</p>
+          <a href="https://www.ticketmaster.com.mx/bruno-mars-boletos/artist/1466801?utm_source=OCESA-performance-max&utm_medium=display_paid&utm_campaign=co%3AMX%20%7C%20boletera%3ATKM%20%7C%20pn%3AOCESA%20%7C%20p%3A304%20%7C%20cat%3AConciertos%20%7C%20source%3AGoogle%20%7C%20chl%3AGoogle%20Performance%20Max%20%7C%20bud%3APromotor%20%7C%20ph%3AOn-Sale%20%7C%20an%3ABRUNO%20MARS%20%7C%20a%3A1466801%20%7C%20geo%3ACDMX%20%7C%20vn%3AEGNP%20%7C%20v%3A163903%20%7C%20ed%3A030407081226%20%7C%20obj%3AConsi%20%7C%20&utm_content=an%3ABRUNO%20MARS%20%7C%20en%3A%20%7C%20aud%3AInterest%20%7C%20%20%20%7C%20mt%3An%2Fa%20%7C%20ed%3A030407081226%20%7C%20geo%3ACDMX%20%7C%20vn%3AEGNP%20%7C%20a%3A1466801%20%7C%20v%3A163903%20%7C%20%20%20%7C%20%20%20%7C%20%20&utm_term=an%3ABRUNO%20MARS%20%7C%20ph%3AOnS%20%7C%20cn%3Avarios%20%7C%20ct%3Avarios%20%7C%20%20&gad_source=1&gad_campaignid=23634817132&gbraid=0AAAAADkwQGira7GdReXwPZch_srkpL6Qd&gclid=Cj0KCQiAk6rNBhCxARIsAN5mQLv2haGX1kENPUs6Sfq8guDCNwhgKdsDxiP91oT5TpV77TBGV6xNnGMaAsibEALw_wcB" 
+          class="btn btn-success btn-lg">Ir a compra</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACTO -->
-  <section id="contacto">
+  <!-- CONTACTO CORREGIDO -->
+  <section id="contacto" class="py-5">
     <div class="container">
-      <h2>Contacto</h2>
-      <p>Escríbenos para más información del evento.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2 class="mb-3">Contacto</h2>
+          <p class="lead mb-4">¿Tienes dudas? Escríbenos para más información del evento.</p>
+          <a href="mailto:info@pixelfest.com" class="btn btn-outline-dark">Enviar mensaje</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="bg-dark text-white text-center">
-    <p>PixelFest 2026</p>
+  <!-- FOOTER CORREGIDO -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2026 PixelFest - Todos los derechos reservados</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
